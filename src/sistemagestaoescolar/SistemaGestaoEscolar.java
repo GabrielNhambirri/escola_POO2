@@ -5,6 +5,8 @@
  */
 package sistemagestaoescolar;
 
+import View.MainMenu;
+
 /**
  *
  * @author isacl
@@ -16,7 +18,7 @@ public class SistemaGestaoEscolar {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        MainMenu m = new MainMenu();
     }
     
 }
