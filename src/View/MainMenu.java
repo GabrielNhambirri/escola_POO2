@@ -21,8 +21,8 @@ import javax.swing.*;
 public class MainMenu extends JFrame implements ActionListener {
 
     JPanel panWButtons, panNButtons;
-    JButton[] lstButtons = new JButton[3];
-    JLabel lblWLine, lblLogo, lblNSistGestEsc,lblUsername ;
+    JButton[] lstButtons = new JButton[9];
+    JLabel lblWLine, lblLogo, lblNSistGestEsc, lblUsername;
 
     int wSize = 220;
     String path = "";
@@ -46,27 +46,66 @@ public class MainMenu extends JFrame implements ActionListener {
         path = System.getProperty("user.dir") + "/src/View/img/logo.jpg";
         lblLogo = new JLabel();
         DefinirIimagem(lblLogo, "logo", wSize, wSize);
-        
+
         lblNSistGestEsc = new JLabel("Sistema de Gestao Escolar");
         lblNSistGestEsc.setFont(f2);
         lblNSistGestEsc.setForeground(Color.WHITE);
+        lblNSistGestEsc.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
         lblUsername = new JLabel("username");
         lblUsername.setFont(f2);
         lblUsername.setForeground(Color.WHITE);
-        
+        lblUsername.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 20));
+
         //buttons
         for (int i = 0; i < lstButtons.length; i++) {
-            if (i == 0) {
-                lstButtons[i] = new JButton("Aluno");
-                SetWButtons(lstButtons[i], "Add File_32px");
-            }
-            if (i == 1) {
-                lstButtons[i] = new JButton("Teste");
-                SetWButtons(lstButtons[i], "Add File_32px");
-            }
-            if (i == 2) {
-                lstButtons[i] = new JButton("Professor");
-                SetWButtons(lstButtons[i], "Add File_32px");
+            /*
+            Aluno
+            teste
+            matricula
+            professor
+            enc. ed
+            Classe
+            disciplina
+            Turma
+            ano academico
+             */
+            switch (i) {
+                case 0:
+                    lstButtons[i] = new JButton("Aluno");
+                    SetWButtons(lstButtons[i], "Add File_32px");
+                    break;
+                case 1:
+                    lstButtons[i] = new JButton("Teste");
+                    SetWButtons(lstButtons[i], "Add File_32px");
+                    break;
+                case 2:
+                    lstButtons[i] = new JButton("Matricula");
+                    SetWButtons(lstButtons[i], "Add File_32px");
+                    break;
+                case 3:
+                    lstButtons[i] = new JButton("Professor");
+                    SetWButtons(lstButtons[i], "Add File_32px");
+                    break;
+                case 4:
+                    lstButtons[i] = new JButton("Encarregado de Educacao");
+                    SetWButtons(lstButtons[i], "Add File_32px");
+                    break;
+                case 5:
+                    lstButtons[i] = new JButton("Classe");
+                    SetWButtons(lstButtons[i], "Add File_32px");
+                    break;
+                case 6:
+                    lstButtons[i] = new JButton("Disciplina");
+                    SetWButtons(lstButtons[i], "Add File_32px");
+                    break;
+                case 7:
+                    lstButtons[i] = new JButton("Turma");
+                    SetWButtons(lstButtons[i], "Add File_32px");
+                    break;
+                case 8:
+                    lstButtons[i] = new JButton("Ano Academico");
+                    SetWButtons(lstButtons[i], "Add File_32px");
+                    break;
             }
             lstButtons[i].addActionListener(this);
         }
@@ -81,7 +120,7 @@ public class MainMenu extends JFrame implements ActionListener {
             panWButtons.add(lstButtons[i]);
         }
         add(panWButtons, BorderLayout.WEST);
-        
+
         panNButtons.add(lblLogo, BorderLayout.WEST);
         panNButtons.add(lblNSistGestEsc, BorderLayout.CENTER);
         panNButtons.add(lblUsername, BorderLayout.EAST);
