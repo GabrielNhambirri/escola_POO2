@@ -45,7 +45,7 @@ public class MainMenu extends JFrame implements ActionListener {
 
         path = System.getProperty("user.dir") + "/src/View/img/logo.jpg";
         lblLogo = new JLabel();
-        DefinirIimagem(lblLogo, "logo", wSize, wSize);
+        DefinirIimagem(lblLogo, "logo", wSize, 90);
 
         lblNSistGestEsc = new JLabel("Sistema de Gestao Escolar");
         lblNSistGestEsc.setFont(f2);
