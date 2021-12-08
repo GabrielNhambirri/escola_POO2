@@ -3,24 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Objectos;
-
-import java.io.Serializable;
+package Model.ValueObject;
 
 /**
  *
  * @author isacl
  */
-public class Professor extends Pessoa implements Serializable{
+public class Professor extends Pessoa {
 
     private String grauAcademico;
 
-    public Professor(Pessoa x, String grauAcademico){
+    public Professor(Pessoa x, String grauAcademico) {
         super(x);
         this.grauAcademico = grauAcademico;
     }
-    
-    public void update(Pessoa x, String grauAcademico){
+
+    public void update(Pessoa x, String grauAcademico) {
         update(x);
         this.grauAcademico = grauAcademico;
     }

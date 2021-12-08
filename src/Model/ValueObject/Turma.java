@@ -1,17 +1,15 @@
+package Model.ValueObject;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Objectos;
-
-import java.io.Serializable;
-
 /**
  *
  * @author isacl
  */
-public class Turma implements Serializable{
+public class Turma {
 
     private int idTurma;
     private String nome;

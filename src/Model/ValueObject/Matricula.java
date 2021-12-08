@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Objectos;
-
-import java.io.Serializable;
+package Model.ValueObject;
 
 /**
  *
  * @author isacl
  */
-public class Matricula implements Serializable{
+public class Matricula {
+
     private int nrEstudante;
     private int idTurma;
     private int idAnoAcademico;
@@ -45,6 +44,5 @@ public class Matricula implements Serializable{
     public void setIdAnoAcademico(int idAnoAcademico) {
         this.idAnoAcademico = idAnoAcademico;
     }
-    
-    
+
 }

@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Objectos;
-
-import java.io.Serializable;
+package Model.ValueObject;
 
 /**
  *
  * @author isacl
  */
-public class AnoAcademico implements Serializable{
+public class AnoAcademico {
+
     private int idAnoAcademico;
     private int ano;
     private int trimestre;
@@ -33,8 +32,8 @@ public class AnoAcademico implements Serializable{
     public int getTrimestre() {
         return trimestre;
     }
-    
-    public String toString(){
+
+    public String toString() {
         String format = "%-20s %-20s %-20s";
         return String.format(format, idAnoAcademico, ano, trimestre);
     }

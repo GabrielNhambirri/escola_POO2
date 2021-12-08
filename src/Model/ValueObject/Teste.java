@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Objectos;
+package Model.ValueObject;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author isacl
  */
-public class Teste implements Serializable{
+public class Teste{
 
     private int idTeste;
     private float nota;

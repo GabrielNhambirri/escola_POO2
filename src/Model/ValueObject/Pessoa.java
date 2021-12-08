@@ -3,15 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Objectos;
-
-import java.io.Serializable;
+package Model.ValueObject;
 
 /**
  *
  * @author isacl
  */
-public class Pessoa implements Serializable{
+public class Pessoa {
 
     protected int idPessoa;
     protected String pNome;
@@ -32,8 +30,8 @@ public class Pessoa implements Serializable{
         this.tel1 = tel1;
         this.tel2 = tel2;
     }
-    
-    public Pessoa(Pessoa ob){
+
+    public Pessoa(Pessoa ob) {
         this.idPessoa = ob.idPessoa;
         this.pNome = ob.pNome;
         this.apelido = ob.apelido;
@@ -43,7 +41,7 @@ public class Pessoa implements Serializable{
         this.tel1 = ob.tel1;
         this.tel2 = ob.tel2;
     }
-    
+
     public void update(Pessoa ob) {
         this.pNome = ob.pNome;
         this.apelido = ob.apelido;
@@ -66,26 +64,21 @@ public class Pessoa implements Serializable{
         return pNome;
     }
 
-
     public String getApelido() {
         return apelido;
     }
-
 
     public char getSexo() {
         return sexo;
     }
 
-
     public String getNrBI() {
         return nrBI;
     }
 
-
     public String getEstadoCivil() {
         return estadoCivil;
     }
-
 
     public String getTel1() {
         return tel1;
@@ -95,15 +88,14 @@ public class Pessoa implements Serializable{
         return tel2;
     }
 
-
     public String toString() {
         String format = "%-12s %-15s %-20s %-12s %-20s %-20s %-25s", s = "";
         if (sexo == 'M') {
             s = "Masculino";
-        }else if (sexo == 'F') {
+        } else if (sexo == 'F') {
             s = "Feminino";
         }
-        
+
         return String.format(format, idPessoa, pNome, apelido, s, nrBI, estadoCivil, tel1 + "  " + tel2);
     }
 }

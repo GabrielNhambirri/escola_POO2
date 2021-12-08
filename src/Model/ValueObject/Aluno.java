@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Objectos;
+package Model.ValueObject;
 
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -13,7 +12,7 @@ import java.util.Date;
  *
  * @author isacl
  */
-public class Aluno extends Pessoa implements Serializable{
+public class Aluno extends Pessoa{
 
     private int nrEstudante;
     private Date dataNascimento;
