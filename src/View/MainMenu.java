@@ -5,6 +5,7 @@
  */
 package View;
 
+import View.Create.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,7 +21,7 @@ import javax.swing.*;
  */
 public class MainMenu extends JFrame implements ActionListener {
 
-    JPanel panWButtons, panNButtons;
+    JPanel panWButtons, panNButtons, main;
     JButton[] lstButtons = new JButton[9];
     JLabel lblWLine, lblLogo, lblNSistGestEsc, lblUsername;
 
@@ -30,6 +31,7 @@ public class MainMenu extends JFrame implements ActionListener {
 
     public MainMenu() {
         //panels
+        main = new JPanel(new BorderLayout());
         panWButtons = new JPanel();
         panWButtons.setBackground(new Color(62, 62, 62));
         panWButtons.setLayout(new BoxLayout(panWButtons, BoxLayout.Y_AXIS));
@@ -119,13 +121,15 @@ public class MainMenu extends JFrame implements ActionListener {
         for (int i = 0; i < lstButtons.length; i++) {
             panWButtons.add(lstButtons[i]);
         }
-        add(panWButtons, BorderLayout.WEST);
+        main.add(panWButtons, BorderLayout.WEST);
 
         panNButtons.add(lblLogo, BorderLayout.WEST);
         panNButtons.add(lblNSistGestEsc, BorderLayout.CENTER);
         panNButtons.add(lblUsername, BorderLayout.EAST);
-        add(panNButtons, BorderLayout.NORTH);
 
+        main.add(panNButtons, BorderLayout.NORTH);
+
+        add(main);
         setSize(1366, 760);
         show();
 
@@ -158,8 +162,20 @@ public class MainMenu extends JFrame implements ActionListener {
         lbl.setIcon(new ImageIcon(dimg));
     }
 
-    @Override
-    public void actionPerformed(ActionEvent ae) {
+    private void showForm(Component com) {
+        BorderLayout layout = (BorderLayout) main.getLayout();
+        if (layout.getLayoutComponent(BorderLayout.CENTER) != null) 
+            main.remove(layout.getLayoutComponent(BorderLayout.CENTER));
+        
+        main.add(com, BorderLayout.CENTER);
+        main.repaint();
+        main.revalidate();
+    }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == lstButtons[0]) {
+            showForm(new Teste2());
+        }
     }
 }

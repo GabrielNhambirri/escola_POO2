@@ -36,6 +36,10 @@ public class Teste implements Serializable{
         this.nrEstudante = nrEstudante;
     }
 
+    public Teste() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getIdTeste() {
         return idTeste;
     }

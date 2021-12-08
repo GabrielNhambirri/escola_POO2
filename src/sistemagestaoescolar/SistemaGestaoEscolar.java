@@ -5,8 +5,8 @@
  */
 package sistemagestaoescolar;
 
+import View.Create.Teste;
 import View.MainMenu;
-
 /**
  *
  * @author isacl
@@ -19,6 +19,7 @@ public class SistemaGestaoEscolar {
     public static void main(String[] args) {
         // TODO code application logic here
         MainMenu m = new MainMenu();
+        //Teste t = new Teste();
     }
-    
+
 }
